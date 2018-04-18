@@ -1,7 +1,14 @@
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <link rel="stylesheet" href="/css/styles.css">
-  <title>PETTYGRAM</title>
-</head>
+<header class="navbar">
+  <nav class="navbar__container">
+    <nav class="navbar__nav" role="navigation">
+      <ul class="navbar__list">
+        <li class="navbar__item">
+          <a class="navbar__link {{#if activePage.home}}navbar__link--active{{/if}}" href="/">Home</a>
+        </li>
+        <li class="navbar__item">
+          <a class="navbar__link {{#if activePage.fruits}}navbar__link--active{{/if}}" href="/fruits">Fruits</a>
+        </li>
+      </ul>
+    </nav>
+  </nav>
+</header>
