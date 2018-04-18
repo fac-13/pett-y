@@ -1,0 +1,31 @@
+<header class="navbar">
+  <nav class="navbar__container">
+    <nav class="navbar__nav" role="navigation">
+      <ul class="navbar__list">
+        <li class="navbar__item">
+          <a class="navbar__link {{#if activePage.home}}navbar__link--active{{/if}}" href="/">Home</a>
+        </li>
+        <li class="navbar__item">
+          <a class="navbar__link {{#if activePage.photos}}navbar__link--active{{/if}}" href="/fruits">Fruits</a>
+        </li>
+        <li>
+          <a id="open-modal">Post a photo</a>
+          <div id="modal" class="modal">
+            <div class="modal-content">
+              <span id="close-modal" class="close">&times;</span>
+              <form id="photo-form">
+                <label for="post-photo">Location</label>
+                <input id="post-photo" name="location" required/></input>
+                <label for="url-photo">URL</label>
+                <input id="url-photo" name="url" required/></input>
+                <label for="review-photo">Review</label>
+                <input id="review-photo" name="review" required/></input>
+                <button type="submit" id="photo-btn">Publish</button>
+              </form>
+            </div>
+          </div>
+        </li>
+      </ul>
+    </nav>
+  </nav>
+</header>
