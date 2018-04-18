@@ -1,5 +1,6 @@
 const { QueryFile } = require('pg-promise');
 const dbConnect = require("./db_connect.js");
+const path = require('path');
 
 const sql = file => QueryFile(path.join(__dirname, file), { minify: true });
 
