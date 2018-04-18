@@ -1,8 +1,7 @@
-const fs = require("fs");
-
+const { QueryFile } = require('pg-promise');
 const dbConnect = require("./db_connect.js");
 
-sql = fs.readFileSync(`${__dirname}/db_build.sql`).toString();
+const sql = file => QueryFile(path.join(__dirname, file), { minify: true });
 
 // code below allows you to build a test db with extra data for tests
 // if ((process.env.NODE_END = "test")) {
@@ -11,13 +10,17 @@ sql = fs.readFileSync(`${__dirname}/db_build.sql`).toString();
 //   sql = fs.readFileSync(`${__dirname}/db_build.sql`).toString();
 // }
 
-const runDbBuild = cb => {
-dbConnect.query(sql, (err, res) => {
-  if (err) return cb(err);
-  console.log("db built");
-  cb(null, res);
-});
-}
+const build = sql('./db_build.sql');
+
+const runDbBuild = (callback) => {
+  dbConnect
+    .query(build)
+    .then(res => {
+      console.log('res', res);
+      callback();
+    })
+    .catch(e => console.error('error', e));
+};
 
 //export function for testing
 module.exports = runDbBuild;
