@@ -1,4 +1,4 @@
-const photoList = {};
+const photoList = ['key', 'value', 'asdf'];
 
 exports.get = (req, res, next) => {
   const { photo } = req.params;
