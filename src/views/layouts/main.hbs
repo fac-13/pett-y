@@ -5,8 +5,10 @@
   <main class='main'>
     {{{body}}}
   </main>
-  {{>footer}}
-  <script src='/dom.js'></script>
+
+  <script src='/dom.js'></script> {{>footer}} {{#if active.home}}
+  <script src='/home.js'></script> {{/if}} {{#if active.photo}}
+  <script src='/photo.js'></script> {{/if}}
 
 </body>
 
