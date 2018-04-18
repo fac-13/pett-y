@@ -6,7 +6,20 @@
           <a class="navbar__link {{#if activePage.home}}navbar__link--active{{/if}}" href="/">Home</a>
         </li>
         <li class="navbar__item">
-          <a class="navbar__link {{#if activePage.fruits}}navbar__link--active{{/if}}" href="/fruits">Fruits</a>
+          <a class="navbar__link {{#if activePage.photos}}navbar__link--active{{/if}}" href="/fruits">Fruits</a>
+        </li>
+        <li>
+          <a class="navbar__link" id="open-modal">
+            <!-- The Modal -->
+            <div id="myModal" class="modal">
+
+              <!-- Modal content -->
+              <div class="modal-content">
+                <span id="close-modal">&times;</span>
+                <p>Some text in the Modal..</p>
+              </div>
+
+            </div>
         </li>
       </ul>
     </nav>
