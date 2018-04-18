@@ -1,3 +1,4 @@
+const path = require('path');
 const { QueryFile } = require('pg-promise');
 const dbConnect = require("./db_connect.js");
 

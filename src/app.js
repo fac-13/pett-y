@@ -1,7 +1,7 @@
 const express = require('express');
 const path = require('path');
 const exphbs = require('express-handlebars');
-const constrollers = require('./controllers/index');
+const controllers = require('./controllers/index');
 const helpers = require('./views/helpers/index');
 
 const app = express();
