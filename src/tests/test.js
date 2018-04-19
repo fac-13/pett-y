@@ -26,6 +26,8 @@ test('testing photo route for 200', t => {
     });
 });
 
+// testing for getindividualphoto
+
 test('getIndividualPhoto returns an object', t => {
   runDbBuild().then(
     getIndividualPhoto(1).then(queryResult => {
