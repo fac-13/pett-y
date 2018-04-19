@@ -1,3 +1,15 @@
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  box-sizing: border-box;
+}
+
+a {
+  list-style-type: none;
+  text-decoration: none;
+  cursor: pointer;
+  color: #020202;
+}
+
 .modal {
   display: none;
   /* Hidden by default */
@@ -5,7 +17,7 @@
   /* Stay in place */
   z-index: 1;
   /* Sit on top */
-  padding-top: 100px;
+  padding-top: 10%;
   /* Location of the box */
   left: 0;
   top: 0;
@@ -26,7 +38,7 @@
 .modal-content {
   background-color: #fefefe;
   margin: auto;
-  padding: 20px;
+  padding: 1rem;
   border: 1px solid #888;
   width: 80%;
 }
@@ -36,7 +48,7 @@
 .close {
   color: #aaaaaa;
   float: right;
-  font-size: 28px;
+  font-size: 1rem;
   font-weight: bold;
 }
 
