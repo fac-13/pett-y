@@ -1,5 +1,5 @@
-const photoList = ['key', 'value', 'asdf'];
+const idList = ['key', 'value', 'asdf'];
 
 exports.get = (req, res) => {
-  res.render('home', { photoList });
+  res.render('home', { idList });
 };

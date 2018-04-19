@@ -7,7 +7,7 @@ const photo = require('./photo');
 const error = require('./error');
 
 router.get('/', home.get);
-router.get('/:photo', photo.get);
+router.get('/photo/:id', photo.get);
 router.use(error.client);
 router.use(error.server);
 
