@@ -1,6 +1,6 @@
 const path = require('path');
 const { QueryFile } = require('pg-promise');
-const dbConnect = require("./db_connect.js");
+const dbConnect = require('./db_connect.js');
 
 const sql = file => QueryFile(path.join(__dirname, file), { minify: true });
 
@@ -22,4 +22,3 @@ const runDbBuild = () => {
 
 //export function for testing
 module.exports = runDbBuild;
-
