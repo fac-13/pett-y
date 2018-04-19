@@ -13,13 +13,10 @@ const sql = file => QueryFile(path.join(__dirname, file), { minify: true });
 
 const build = sql('./db_build.sql');
 
-const runDbBuild = (callback) => {
-  dbConnect
+const runDbBuild = () => {
+  return dbConnect
     .query(build)
-    .then(res => {
-      console.log('res', res);
-      callback();
-    })
+    .then()
     .catch(e => console.error('error', e));
 };
 
