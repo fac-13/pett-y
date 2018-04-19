@@ -4,6 +4,8 @@
   "description": "",
   "main": "index.js",
   "scripts": {
+    "start": "node ./src/index.js",
+    "start:watch": "nodemon ./src/index.js",
     "test": "tape ./src/tests/test.js | tap-spec"
   },
   "repository": {
@@ -17,10 +19,11 @@
   },
   "homepage": "https://github.com/fac-13/pett-y#readme",
   "dependencies": {
-    "pg-promise": "^8.3.2",
+    "env2": "^2.2.0",
     "express": "^4.16.3",
     "express-handlebars": "^3.0.0",
-    "nodemon": "^1.17.3"
+    "nodemon": "^1.17.3",
+    "pg-promise": "^8.3.2"
   },
   "devDependencies": {
     "supertest": "^3.0.0",

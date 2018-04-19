@@ -1,0 +1,15 @@
+<h2>Home View</h2>
+
+<ul>
+
+ {{#each photoList}}
+ <li>
+     <a href="/{{this.id}}">
+        <img src="{{this.url}}" alt="">     
+     </a>
+ </li>
+
+ {{/each}}
+
+
+</ul>

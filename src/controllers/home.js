@@ -1,5 +1,8 @@
-const photoList = {};
+const getAllPhotos = require('../model/queries/getAllPhotos');
 
 exports.get = (req, res) => {
-  res.render('home', { photoList });
+
+  return getAllPhotos()
+  .then(photoList => res.render('home', { photoList }));
+
 };
