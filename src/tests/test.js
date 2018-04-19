@@ -50,7 +50,7 @@ test('getIndividualPhoto returns an object', t => {
       );
       t.end();
     })
-  );
+  ).catch(console.log)
 });
 
 test('testing that getIndividualPhoto returns an object with url and caption', t => {
@@ -63,7 +63,7 @@ test('testing that getIndividualPhoto returns an object with url and caption', t
       );
       t.end();
     })
-  );
+  ).catch(console.log)
 });
 
 test('checks that query retrieves at least one url', t => {
