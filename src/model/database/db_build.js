@@ -4,14 +4,10 @@ const dbConnect = require('./db_connect.js');
 
 const sql = file => QueryFile(path.join(__dirname, file), { minify: true });
 
-// code below allows you to build a test db with extra data for tests
-// if ((process.env.NODE_END = "test")) {
-//   sql = fs.readFileSync(`${__dirname}/test_db_build.sql`).toString();
-// } else {
-//   sql = fs.readFileSync(`${__dirname}/db_build.sql`).toString();
-// }
+let build;
 
-const build = sql('./db_build.sql');
+  build = sql('./db_build.sql');
+
 
 const runDbBuild = () => {
   return dbConnect
