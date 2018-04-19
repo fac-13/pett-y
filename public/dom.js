@@ -9,8 +9,8 @@ function openModal() {
 
 document.getElementById('open-modal').addEventListener('click', openModal);
 
-// window.addEventListener('click', function (event) {
-//   if (event.target == document.getElementById('modal')) {
-//     closeModal();
-//   }
-// });
+window.addEventListener('click', function (event) {
+  if (event.target == document.getElementById('modal')) {
+    closeModal();
+  }
+});
