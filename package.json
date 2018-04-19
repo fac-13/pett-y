@@ -18,6 +18,7 @@
   },
   "homepage": "https://github.com/fac-13/pett-y#readme",
   "dependencies": {
+    "body-parser": "^1.18.2",
     "env2": "^2.2.0",
     "express": "^4.16.3",
     "express-handlebars": "^3.0.0",
