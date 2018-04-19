@@ -5,7 +5,5 @@ notifications:
   - email: "false"
 services:
   - postgresql
-  install:
-  - npm install
 before_script:
   - psql -c 'create database petty;' -U postgres
