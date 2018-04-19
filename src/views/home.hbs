@@ -1,3 +1,7 @@
 <section>
-  <h1>hashdkf;aldks</h1>
+  {{#each photoData}}
+  <a href= "/photo/{{ this.id }}">
+    <img src="{{ this.url }}"/>
+  </a>
+  {{/each}}
 </section>

@@ -1,9 +1,13 @@
-const idList = ['1', '2', '3'];
+const { getIndividualPhoto } = require ('./../model/queries/getIndividualPhoto');
 
 exports.get = (req, res, next) => {
   const { id } = req.params;
-  if (idList.includes(id)) {
-    return res.render('photo', { id });
-  }
+  return getIndividualPhoto(id)
+  .then(singlePhotoData => {
+    console.log(singlePhotoData)
+    res.render('photo', { singlePhotoData });
+    console.log('in the then')
+  }).catch(err => console.log(err))
+
   next();
 };
