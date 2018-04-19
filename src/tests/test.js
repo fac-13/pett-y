@@ -2,8 +2,16 @@ const test = require('tape');
 const request = require('supertest');
 const routes = require('./../app.js');
 const runDbBuild = require('../model/database/db_build.js');
-const { getIndividualPhoto } = require('../model/queries/getIndividualPhoto');
-const { getAllPhotos } = require('./../model/queries/getRequests');
+const {
+  getIndividualPhoto
+} = require('../model/queries/getIndividualPhoto');
+const {
+  getAllPhotos
+} = require('./../model/queries/getRequests');
+
+const {
+  postPhoto
+} = require('../model/queries/postPhoto');
 
 test('testing home route has 200 status code', t => {
   request(routes)
@@ -57,8 +65,7 @@ test('testing that getIndividualPhoto returns an object with url and caption', t
   runDbBuild().then(
     getIndividualPhoto(1).then(queryResult => {
       t.deepEquals(
-        Object.keys(queryResult),
-        ['url', 'caption'],
+        Object.keys(queryResult), ['url', 'caption'],
         'queryResult should have url and caption keys'
       );
       t.end();
@@ -92,4 +99,25 @@ test('checks if response is an object', t => {
       t.end();
     })
     .catch(err => console.log(err));
+});
+
+
+//postPhoto query tests
+test('checks if photos table rows.length increased by one', t => {
+  runDbBuild()
+    .then(() => {
+      return getAllPhotos()
+      .then(res => {
+        let tableLength = res.length;
+        return postPhoto('url', 'caption')
+        .then(() => {
+          return getAllPhotos()
+          .then(secondRes => {
+            t.equal(tableLength, (secondRes.length - 1), 'The length of table should increase by one');
+            t.end();
+          })
+        })
+      })
+  .catch(err => console.log(err));
+    })
 });
