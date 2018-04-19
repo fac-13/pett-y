@@ -1,14 +1,16 @@
-document.getElementById('open-modal').addEventListener('click', openModal());
+function closeModal() {
+  document.getElementById('modal').style.display = 'none';
+}
 
 function openModal() {
-  document.getElementById('myModal').style.display = 'block';
-  document.getElementById('close-modal').addEventListener('click', function () {
-    document.getElementById('myModal').style.display = "none";
-  })
+  document.getElementById('modal').style.display = 'block';
+  document.getElementById('close-modal').addEventListener('click', closeModal);
 }
 
-window.onclick = function (event) {
-  if (event.target !== document.getElementById('myModal')) {
-    document.getElementById('myModal').style.display = "none";
+document.getElementById('open-modal').addEventListener('click', openModal);
+
+window.addEventListener('click', function (event) {
+  if (event.target == document.getElementById('modal')) {
+    closeModal();
   }
-}
+});
