@@ -43,7 +43,14 @@ test('checks that query retrieves at least one url', t => {
   }).then((res) => {
     t.deepEqual(res[0].url, 'https://3c1703fe8d.site.internapcdn.net/newman/csz/news/800/2017/docatspurrwh.jpg', 'Should return first URL');
     t.end();
-  }).catch(err => {
-    console.log(err);
-  });
+  }).catch((err) => console.log(err));
+});
+
+test('checks if response is an object', t => {
+  runDbBuild().then(()=> {
+    return getAllPhotos();
+  }).then((res) => {
+    t.equal(typeof res, 'object', 'The type of res should be an object')
+    t.end();
+  }).catch((err) => console.log(err));
 });
