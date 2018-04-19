@@ -4,7 +4,7 @@ require('env2')('./config.env');
 
 let DB_URL = process.env.DB_URL;
 
-if (process.env.NODE_ENV === 'testpetty') {
+if (process.env.NODE_ENV === 'test') {
   DB_URL = process.env.TEST_DB_URL;
 }
 
