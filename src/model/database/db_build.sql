@@ -10,10 +10,16 @@ CREATE TABLE photos
 INSERT INTO photos
     (url, caption)
 VALUES
-    ('https://3c1703fe8d.site.internapcdn.net/newman/csz/news/800/2017/docatspurrwh.jpg', 'Check out my cat!!'),
-    ('https://img.buzzfeed.com/buzzfeed-static/static/2017-04/25/4/enhanced/buzzfeed-prod-fastlane-01/enhanced-23831-1493109569-1.jpg', 'DOGGGGGSSSSS <3'),
-    ('https://1.bp.blogspot.com/--UOFOYpSBOs/VeMERNfMLTI/AAAAAAAABAM/HYeD94p6Xek/s728/lizard-squad-arrests.jpg', 'Screw your guys, Lizards for life'),
-    ('https://3c1703fe8d.site.internapcdn.net/newman/csz/news/800/2017/docatspurrwh.jpg', 'Check out my cat!!'),
-    ('https://img.buzzfeed.com/buzzfeed-static/static/2017-04/25/4/enhanced/buzzfeed-prod-fastlane-01/enhanced-23831-1493109569-1.jpg', 'DOGGGGGSSSSS <3'),
-    ('https://1.bp.blogspot.com/--UOFOYpSBOs/VeMERNfMLTI/AAAAAAAABAM/HYeD94p6Xek/s728/lizard-squad-arrests.jpg', 'Screw your guys, Lizards for life');
+    ('http://www.theparisreview.org/blog/wp-content/uploads/2016/09/3.jpeg', 'Cy Twombly'),
+    ('https://i.pinimg.com/564x/c1/88/6f/c1886f41c67fbec3fe4ee88c258cce5d.jpg', 'another... '),
+    ('http://museubispodorosario.com/wp-content/uploads/2015/03/bispo_01.jpg', 'Arthur Rosario de Bispo'),
+    ('http://www.museum-brandhorst.de/typo3temp/pics/e2c0fff0a4.jpg', 'Cy again'),
+    ('https://i.ytimg.com/vi/sgYTlhGc-E8/maxresdefault.jpg', 'Arthur Ganson'),
+    ('https://i.pinimg.com/564x/33/ba/26/33ba265d297950c48159cdf0a41ecf7f.jpg', 'Peter Lanyons'),
+    ('http://www.theparisreview.org/blog/wp-content/uploads/2016/09/3.jpeg', 'Cy Twombly'),
+    ('https://i.pinimg.com/564x/c1/88/6f/c1886f41c67fbec3fe4ee88c258cce5d.jpg', 'another... '),
+    ('http://museubispodorosario.com/wp-content/uploads/2015/03/bispo_01.jpg', 'Arthur Rosario de Bispo'),
+    ('http://www.museum-brandhorst.de/typo3temp/pics/e2c0fff0a4.jpg', 'Cy again'),
+    ('https://i.ytimg.com/vi/sgYTlhGc-E8/maxresdefault.jpg', 'Arthur Ganson'),
+    ('https://i.pinimg.com/564x/33/ba/26/33ba265d297950c48159cdf0a41ecf7f.jpg', 'Peter Lanyons');
 COMMIT;
