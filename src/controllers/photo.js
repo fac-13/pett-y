@@ -1,8 +1,8 @@
-const idList = ['1', '2', '3'];
+const individualPhotoData = require ('./../model/queries/getIndividualPhoto');
 
 exports.get = (req, res, next) => {
   const { id } = req.params;
-  if (idList.includes(id)) {
+  if (individualPhotoData.includes(id)) {
     return res.render('photo', { id });
   }
   next();

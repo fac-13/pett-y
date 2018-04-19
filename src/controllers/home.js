@@ -1,5 +1,8 @@
-const idList = ['1', '2', '3'];
+const { getAllPhotos } = require('./../model/queries/getAllPhotos');
 
 exports.get = (req, res) => {
-  res.render('home', { idList });
+  return getAllPhotos()
+  .then(photoData => {
+    res.render('home', { photoData })})
+    .catch(err => console.log(err));
 };
