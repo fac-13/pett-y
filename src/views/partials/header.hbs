@@ -9,17 +9,19 @@
           <a class="navbar__link {{#if activePage.photos}}navbar__link--active{{/if}}" href="/fruits">Fruits</a>
         </li>
         <li>
-          <a class="navbar__link" id="open-modal">
-            <!-- The Modal -->
-            <div id="myModal" class="modal">
-
-              <!-- Modal content -->
-              <div class="modal-content">
-                <span id="close-modal">&times;</span>
-                <form>Some text in the Modal..</form>
-              </div>
-
+          <a id="open-modal">Post a photo</a>
+          <div id="modal" class="modal">
+            <div class="modal-content">
+              <span id="close-modal" class="close">&times;</span>
+              <form id="photo-form">
+                <label for="url-photo">URL</label>
+                <input id="url-photo" name="url" required/></input>
+                <label for="caption-photo">Caption</label>
+                <input id="caption-photo" name="review" required/></input>
+                <button type="submit" id="photo-btn">Publish</button>
+              </form>
             </div>
+          </div>
         </li>
       </ul>
     </nav>
