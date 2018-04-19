@@ -4,7 +4,8 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "tape ./src/tests/test.js | tap-spec"
+    "test": "tape ./src/tests/*.js | tap-spec",
+    "dev": "nodemon ./src/index.js"
   },
   "repository": {
     "type": "git",
