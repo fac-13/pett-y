@@ -13,10 +13,13 @@ ul {
   padding: 15px 5px;
 }
 li {
-  margin: 15px 5px;
-  width: 7%;
+  margin: 15px 15px;
+  width: 6%;
   color: hsla(0, 4%, 50%, 0.5);
   border-bottom: solid 2px hsla(0, 4%, 50%, 0.5);
+  font-size: 12px;
+  letter-spacing: 3px;
+  padding-bottom: 10px;
 }
 .navbar {
   background: whitesmoke;
