@@ -25,7 +25,8 @@
     "express": "^4.16.3",
     "express-handlebars": "^3.0.0",
     "nodemon": "^1.17.3",
-    "pg-promise": "^8.3.2"
+    "pg-promise": "^8.3.2",
+    "request": "^2.85.0"
   },
   "devDependencies": {
     "supertest": "^3.0.0",
