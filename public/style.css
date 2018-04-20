@@ -98,3 +98,19 @@ a {
   text-decoration: none;
   cursor: pointer;
 }
+
+/* Image fade in */
+
+.fade-in {
+  animation: fadetransition;
+  animation-duration: 3s;
+}
+
+@keyframes fadetransition {
+  0%{
+    opacity: 0;
+  }
+  100%{
+    opacity: 1;
+  }
+}
