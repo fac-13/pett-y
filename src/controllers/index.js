@@ -6,8 +6,8 @@ const cookieSession = require('cookie-session');
 
 const home = require('./home');
 const photo = require('./photo');
+const post = require('./post');
 const error = require('./error');
-const { postPhoto } = require('../model/queries/postPhoto');
 
 router.use(bodyParser.json());
 router.use(bodyParser.urlencoded({ extended: false }));
@@ -20,15 +20,8 @@ router.use(
 );
 
 router.get('/', home.get);
-
 router.get('/photo/:id', photo.get);
-router.post('/postphoto', (req, res, next) => {
-  return postPhoto(req.body.url, req.body.review)
-    .then(res.redirect('/'))
-    .catch(console.log);
-
-  next();
-});
+router.post('/postphoto', post.get);
 router.use(error.client);
 router.use(error.server);
 
