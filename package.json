@@ -5,7 +5,8 @@
   "main": "index.js",
   "scripts": {
     "test": "NODE_ENV=test tape ./src/tests/*.js | tap-spec",
-    "dev": "nodemon ./src/index.js"
+    "dev": "nodemon ./src/index.js",
+    "build": "node src/model/database/db_build.js"
   },
   "repository": {
     "type": "git",
