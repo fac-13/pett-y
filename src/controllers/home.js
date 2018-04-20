@@ -7,6 +7,9 @@ exports.get = (req, res, next) => {
     .then(photoData => {
       res.render('home', { photoData });
     })
-    .catch(err => console.log(err));
+    .catch((err) => {
+      console.log(err);
+      next(err);
+  });
   next();
 };
