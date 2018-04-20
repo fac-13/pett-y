@@ -23,5 +23,5 @@ VALUES
     ('https://i.pinimg.com/564x/33/ba/26/33ba265d297950c48159cdf0a41ecf7f.jpg', 'Peter Lanyons'),
     ('https://i.pinimg.com/564x/c1/88/6f/c1886f41c67fbec3fe4ee88c258cce5d.jpg', 'another... '),
     ('http://www.theparisreview.org/blog/wp-content/uploads/2016/09/3.jpeg', 'Cy Twombly');
-,
+
 COMMIT;
