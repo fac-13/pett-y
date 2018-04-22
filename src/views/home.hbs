@@ -1,7 +1,30 @@
 <section>
+
+  {{!-- {{#if firstPhoto}}
+  {{#with firstPhoto}}
+  <a href= "/photo/{{id}}">
+    <img src="{{url}}"/>
+  </a>
+  {{/with}}
   {{#each photoData}}
-  <a href= "/photo/{{ this.id }}">
-    <img src="{{ this.url }}"/>
+  <a href= "/photo/{{this.id}}">
+    <img src="{{this.url}}"/>
   </a>
   {{/each}}
+  {{#else}} --}}
+  
+
+  {{#if firstPhoto}}
+  {{log firstPhoto}}
+  <a href= "/photo/{{firstPhoto.id}}" class={{fadeInClass}}>
+    <img src="{{firstPhoto.url}}"/>
+  </a>
+  {{/if}}
+  {{#each photoData}}
+  <a href= "/photo/{{this.id}}">
+    <img src="{{this.url}}"/>
+  </a>
+  {{/each}}
+  {{!-- {{/if}} --}}
+  
 </section>
