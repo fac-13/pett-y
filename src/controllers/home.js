@@ -3,7 +3,6 @@ const cookieSession = require('cookie-session');
 
 exports.get = (req, res, next) => {
   req.session.loggedin = true;
-  console.log(req.session);
   return getAllPhotos()
     .then(photoData => {
       if (photoData) {
