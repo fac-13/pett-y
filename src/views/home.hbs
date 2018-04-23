@@ -1,7 +1,12 @@
 <section>
+  {{#if firstPhoto}}
+  <a href= "/photo/{{firstPhoto.id}}" class={{fadeInClass}}>
+    <img src="{{firstPhoto.url}}"/>
+  </a>
+  {{/if}}
   {{#each photoData}}
-  <a href= "/photo/{{ this.id }}">
-    <img src="{{ this.url }}"/>
+  <a href= "/photo/{{this.id}}">
+    <img src="{{this.url}}"/>
   </a>
   {{/each}}
 </section>

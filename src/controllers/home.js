@@ -8,7 +8,14 @@ exports.get = (req, res, next) => {
       if (photoData) {
         photoData.reverse();
       }
-      res.render('home', { photoData });
+      if(req.session.justposted){
+        req.session.justposted = false;
+        let fadeInClass = ['fade-in'];
+        let firstPhoto = photoData.shift();
+      res.render('home', { photoData, firstPhoto, fadeInClass });
+      } else { 
+        res.render('home', { photoData });
+      }
     })
     .catch(err => {
       console.log(err);
